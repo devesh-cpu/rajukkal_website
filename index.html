@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tamil Nadu Rajukkal Sangam</title>
+  <title>Raju's Community Portal</title>
 
   <!-- Google Fonts: Traditional & Elegant -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -295,25 +295,25 @@
 <body class="bg-slate-50 min-h-screen overflow-x-hidden">
 
   <!-- ════════════════════════════════════════════════════
-       FLOATING GLASSMORPHISM NAVIGATION
+       FLOATING GLASSMORPHISM NAVIGATION (Reduced height)
        ════════════════════════════════════════════════════ -->
   <nav class="glass-nav fixed top-0 left-0 right-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between h-16">
 
-      <!-- Logo + Org Name -->
-      <a href="#" class="flex items-center gap-3" onclick="switchView('home')">
-        <div class="logo-mark">
-          <img src="logo.png" alt="Rajukkal Sangam Logo" class="h-12 w-auto object-contain drop-shadow-md" onerror="this.outerHTML='<i class=\'fa-solid fa-crown text-[#D4AF37] text-2xl\'></i>'" />
+      <!-- Logo + Org Name (Text scaling fixed for iOS wrapping) -->
+      <a href="#" class="flex items-center gap-3 max-w-[65%]" onclick="switchView('home')">
+        <div class="logo-mark flex-shrink-0">
+          <img src="logo.png" alt="Logo" class="h-10 w-auto object-contain drop-shadow-md" onerror="this.outerHTML='<i class=\'fa-solid fa-crown text-[#D4AF37] text-xl\'></i>'" />
         </div>
         <div class="flex flex-col justify-center">
-          <span class="orb text-[15px] sm:text-base font-bold tracking-widest text-[#0F172A] leading-tight" data-key="org_name">
-            TAMIL NADU RAJUKKAL SANGAM
+          <span class="orb text-xs sm:text-sm md:text-base font-bold tracking-widest text-[#0F172A] leading-snug break-words" data-key="org_name">
+            RAJU'S COMMUNITY PORTAL
           </span>
         </div>
       </a>
 
       <!-- Desktop Navigation & Lang Toggle -->
-      <div class="hidden md:flex items-center gap-6" id="desktop-nav">
+      <div class="hidden md:flex items-center gap-5 lg:gap-6" id="desktop-nav">
         <a href="#" class="nav-link active" data-view="home" onclick="switchView('home')" data-key="nav_home">Home</a>
         <a href="#" class="nav-link" data-view="about" onclick="switchView('about')" data-key="nav_about">About Us</a>
         <a href="#" class="nav-link" data-view="services" onclick="switchView('services')" data-key="nav_initiatives">Initiatives</a>
@@ -321,16 +321,16 @@
         <a href="#" class="nav-link" data-view="events" onclick="switchView('events')" data-key="nav_events">Events</a>
         <a href="#" class="nav-link" data-view="contact" onclick="switchView('contact')" data-key="nav_contact">Contact</a>
         
-        <button class="cta-btn px-6 py-2.5 rounded-lg text-xs hidden lg:flex items-center gap-2">
+        <button class="cta-btn px-5 py-2 rounded-lg text-xs hidden lg:flex items-center gap-2">
           <i class="fa-solid fa-user-plus text-[10px]"></i>
           <span data-key="nav_join">Join Sangam</span>
         </button>
 
         <!-- Language Switcher -->
-        <div class="flex items-center gap-2 ml-2 border-l border-[#D4AF37]/30 pl-4">
-          <button class="lang-btn text-xs font-bold orb tracking-widest text-[#D4AF37] transition-colors" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <div class="flex items-center gap-2 ml-1 border-l border-[#D4AF37]/30 pl-3">
+          <button class="lang-btn text-[10px] sm:text-xs font-bold orb tracking-widest text-[#D4AF37] transition-colors" data-lang="en" onclick="setLanguage('en')">EN</button>
           <span class="text-slate-400 text-[10px]">|</span>
-          <button class="lang-btn text-xs font-bold orb tracking-widest text-slate-400 hover:text-[#D4AF37] transition-colors" data-lang="ta" onclick="setLanguage('ta')">TA</button>
+          <button class="lang-btn text-[10px] sm:text-xs font-bold orb tracking-widest text-slate-400 hover:text-[#D4AF37] transition-colors" data-lang="ta" onclick="setLanguage('ta')">TA</button>
         </div>
       </div>
 
@@ -362,9 +362,9 @@
   </nav>
 
   <!-- ════════════════════════════════════════════════════
-       MAIN CONTENT AREA — VIEW SHELLS
+       MAIN CONTENT AREA — VIEW SHELLS (Adjusted top padding)
        ════════════════════════════════════════════════════ -->
-  <main class="pt-20">
+  <main class="pt-16">
 
     <!-- ══════════════════════════════════════════════════
          VIEW: HOME
@@ -376,6 +376,7 @@
         <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-[0.12] blur-3xl" style="background:radial-gradient(circle, #D4AF37, transparent)"></div>
         <div class="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full opacity-10 blur-3xl" style="background:radial-gradient(circle, #F59E0B, transparent)"></div>
 
+        <!-- Center contents scaled up slightly per request -->
         <div class="relative z-10 text-center px-6 max-w-5xl mx-auto animate-fade-up mt-8" style="animation: fadeUp 0.8s ease forwards">
           
           <div class="hero-badge mb-6 mx-auto w-fit bg-[#D4AF37]/10">
@@ -383,8 +384,7 @@
             <span data-key="hero_badge">Official Digital Hub</span>
           </div>
 
-          <!-- Scaled down typography for elegance -->
-          <h1 class="orb text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+          <h1 class="orb text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
             <span data-key="hero_head1">Preserving Our Legacy</span>
             <br />
             <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(90deg, #D4AF37, #FDE68A)" data-key="hero_head2">
@@ -392,8 +392,8 @@
             </span>
           </h1>
 
-          <p class="text-slate-300 text-base max-w-2xl mx-auto mb-10 font-light leading-relaxed tracking-wide font-playfair" data-key="hero_desc">
-            Welcome to the official online portal of the Tamil Nadu Rajukkal Sangam. A dedicated platform uniting our community for cultural preservation, socio-economic welfare, and seamless organizational coordination.
+          <p class="text-slate-300 text-lg sm:text-xl max-w-3xl mx-auto mb-10 font-light leading-relaxed tracking-wide font-playfair" data-key="hero_desc">
+            Welcome to the official online portal of the Raju's Community. A dedicated platform uniting our community for cultural preservation, socio-economic welfare, and seamless organizational coordination.
           </p>
 
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -414,60 +414,60 @@
         </div>
       </section>
 
-      <!-- COMMUNITY AD SLOTS GRID -->
+      <!-- COMMUNITY AD SLOTS GRID (Scaled up slightly) -->
       <section class="max-w-7xl mx-auto px-6 lg:px-10 py-20">
         <div class="mb-10 text-center">
           <p class="eyebrow mb-3" data-key="board_eyebrow">Notice Board</p>
-          <h2 class="orb text-2xl sm:text-3xl font-bold text-[#0F172A]" data-key="board_head">Community Announcements</h2>
+          <h2 class="orb text-3xl sm:text-4xl font-bold text-[#0F172A]" data-key="board_head">Community Announcements</h2>
           <div class="gold-rule mt-4 max-w-xs mx-auto"></div>
         </div>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="COMMUNITY_AD_SLOTS">
-          <div class="ad-slot p-5 flex flex-col items-center text-center gap-3 bg-white shadow-sm border-slate-200 hover:border-[#D4AF37] cursor-pointer">
-            <i class="fa-solid fa-handshake-angle text-xl text-[#D4AF37]"></i>
-            <span class="text-xs font-bold text-[#0F172A] tracking-widest uppercase orb" data-key="board_1">Annual General Meeting 2026</span>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="COMMUNITY_AD_SLOTS">
+          <div class="ad-slot p-6 flex flex-col items-center text-center gap-4 bg-white shadow-sm border-slate-200 hover:border-[#D4AF37] cursor-pointer">
+            <i class="fa-solid fa-handshake-angle text-2xl text-[#D4AF37]"></i>
+            <span class="text-sm font-bold text-[#0F172A] tracking-widest uppercase orb break-words" data-key="board_1">Annual General Meeting 2026</span>
           </div>
-          <div class="ad-slot p-5 flex flex-col items-center text-center gap-3 bg-white shadow-sm border-slate-200 hover:border-[#D4AF37] cursor-pointer">
-            <i class="fa-solid fa-graduation-cap text-xl text-[#D4AF37]"></i>
-            <span class="text-xs font-bold text-[#0F172A] tracking-widest uppercase orb" data-key="board_2">Education Scholarship Setup</span>
+          <div class="ad-slot p-6 flex flex-col items-center text-center gap-4 bg-white shadow-sm border-slate-200 hover:border-[#D4AF37] cursor-pointer">
+            <i class="fa-solid fa-graduation-cap text-2xl text-[#D4AF37]"></i>
+            <span class="text-sm font-bold text-[#0F172A] tracking-widest uppercase orb break-words" data-key="board_2">Education Scholarship Setup</span>
           </div>
-          <div class="ad-slot p-5 flex flex-col items-center text-center gap-3 bg-white shadow-sm border-slate-200 hover:border-[#D4AF37] cursor-pointer">
-            <i class="fa-solid fa-rings-wedding text-xl text-[#D4AF37]"></i>
-            <span class="text-xs font-bold text-[#0F172A] tracking-widest uppercase orb" data-key="board_3">Matrimony Mega Meet</span>
+          <div class="ad-slot p-6 flex flex-col items-center text-center gap-4 bg-white shadow-sm border-slate-200 hover:border-[#D4AF37] cursor-pointer">
+            <i class="fa-solid fa-rings-wedding text-2xl text-[#D4AF37]"></i>
+            <span class="text-sm font-bold text-[#0F172A] tracking-widest uppercase orb break-words" data-key="board_3">Matrimony Mega Meet</span>
           </div>
-          <div class="ad-slot p-5 flex flex-col items-center text-center gap-3 bg-white shadow-sm border-slate-200 hover:border-[#D4AF37] cursor-pointer">
-            <i class="fa-solid fa-building-columns text-xl text-[#D4AF37]"></i>
-            <span class="text-xs font-bold text-[#0F172A] tracking-widest uppercase orb" data-key="board_4">Business Network Expo</span>
+          <div class="ad-slot p-6 flex flex-col items-center text-center gap-4 bg-white shadow-sm border-slate-200 hover:border-[#D4AF37] cursor-pointer">
+            <i class="fa-solid fa-building-columns text-2xl text-[#D4AF37]"></i>
+            <span class="text-sm font-bold text-[#0F172A] tracking-widest uppercase orb break-words" data-key="board_4">Business Network Expo</span>
           </div>
         </div>
       </section>
 
-      <!-- FEATURED HIGHLIGHTS ROW -->
+      <!-- FEATURED HIGHLIGHTS ROW (Scaled up slightly) -->
       <section class="bg-white border-t border-b border-slate-100 py-16 shadow-inner">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="glass-card rounded-2xl p-8 cursor-pointer bg-slate-50">
-              <div class="w-12 h-12 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center mb-5 shadow-sm">
-                <i class="fa-solid fa-landmark-dome text-[#D4AF37] text-lg"></i>
+            <div class="glass-card rounded-2xl p-10 cursor-pointer bg-slate-50">
+              <div class="w-14 h-14 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center mb-6 shadow-sm">
+                <i class="fa-solid fa-landmark-dome text-[#D4AF37] text-xl"></i>
               </div>
               <p class="eyebrow mb-2" data-key="hl_eye1">Heritage</p>
-              <h3 class="orb text-base font-bold text-[#0F172A] mb-2" data-key="hl_head1">Cultural Unity</h3>
+              <h3 class="orb text-lg font-bold text-[#0F172A] mb-3" data-key="hl_head1">Cultural Unity</h3>
               <p class="text-sm text-slate-500 leading-relaxed font-playfair" data-key="hl_desc1">Preserving the rich history and traditions of the Kshatriya Raju lineage for future generations.</p>
             </div>
-            <div class="glass-card rounded-2xl p-8 cursor-pointer bg-slate-50">
-              <div class="w-12 h-12 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center mb-5 shadow-sm">
-                <i class="fa-solid fa-hand-holding-heart text-[#D4AF37] text-lg"></i>
+            <div class="glass-card rounded-2xl p-10 cursor-pointer bg-slate-50">
+              <div class="w-14 h-14 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center mb-6 shadow-sm">
+                <i class="fa-solid fa-hand-holding-heart text-[#D4AF37] text-xl"></i>
               </div>
               <p class="eyebrow mb-2" data-key="hl_eye2">Support</p>
-              <h3 class="orb text-base font-bold text-[#0F172A] mb-2" data-key="hl_head2">Community Welfare</h3>
+              <h3 class="orb text-lg font-bold text-[#0F172A] mb-3" data-key="hl_head2">Community Welfare</h3>
               <p class="text-sm text-slate-500 leading-relaxed font-playfair" data-key="hl_desc2">Driving initiatives for educational assistance, medical aid, and elder care across districts.</p>
             </div>
-            <div class="glass-card rounded-2xl p-8 cursor-pointer bg-slate-50">
-              <div class="w-12 h-12 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center mb-5 shadow-sm">
-                <i class="fa-solid fa-users-gear text-[#D4AF37] text-lg"></i>
+            <div class="glass-card rounded-2xl p-10 cursor-pointer bg-slate-50">
+              <div class="w-14 h-14 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center mb-6 shadow-sm">
+                <i class="fa-solid fa-users-gear text-[#D4AF37] text-xl"></i>
               </div>
               <p class="eyebrow mb-2" data-key="hl_eye3">Growth</p>
-              <h3 class="orb text-base font-bold text-[#0F172A] mb-2" data-key="hl_head3">Global Networking</h3>
+              <h3 class="orb text-lg font-bold text-[#0F172A] mb-3" data-key="hl_head3">Global Networking</h3>
               <p class="text-sm text-slate-500 leading-relaxed font-playfair" data-key="hl_desc3">Connecting professionals and business owners within the community to foster economic growth.</p>
             </div>
           </div>
@@ -483,7 +483,6 @@
 
         <div class="mb-14 text-center sm:text-left">
           <p class="eyebrow mb-3" data-key="abt_eye">About Us</p>
-          <!-- Reduced from 5xl -->
           <h2 class="orb text-3xl sm:text-4xl font-bold text-[#0F172A] leading-tight" data-key="abt_head">Our Glorious Legacy</h2>
           <div class="gold-rule mt-6 max-w-xs mx-auto sm:mx-0"></div>
         </div>
@@ -555,7 +554,7 @@
         <div class="text-center mb-16">
           <p class="eyebrow mb-3" data-key="srv_eye">Our Core Operations</p>
           <h2 class="orb text-3xl sm:text-4xl font-bold text-[#0F172A]" data-key="srv_head">Community Initiatives</h2>
-          <p class="text-slate-500 font-playfair max-w-xl mx-auto mt-4 text-base leading-relaxed" data-key="srv_desc">Structured frameworks designed to support and elevate members of the Rajukkal Sangam across various life stages.</p>
+          <p class="text-slate-500 font-playfair max-w-xl mx-auto mt-4 text-base leading-relaxed" data-key="srv_desc">Structured frameworks designed to support and elevate members of the Raju's Community across various life stages.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="SERVICES_API_HOOK">
@@ -618,7 +617,7 @@
             <p class="eyebrow mb-2" data-key="s3_eye">Networking</p>
             <h3 class="orb text-lg font-bold text-[#0F172A] mb-3" data-key="s3_head">Professional Directory</h3>
             <div class="gold-rule mb-4 w-1/2 mx-auto"></div>
-            <p class="text-sm text-slate-600 font-playfair leading-relaxed mb-6" data-key="s3_desc">Bridging the gap between employers and talented job seekers within the Rajukkal business network.</p>
+            <p class="text-sm text-slate-600 font-playfair leading-relaxed mb-6" data-key="s3_desc">Bridging the gap between employers and talented job seekers within the business network.</p>
             <ul class="text-left space-y-3 mb-8">
               <li class="flex items-center gap-3 text-xs font-semibold text-slate-600">
                 <i class="fa-solid fa-users text-[#D4AF37] text-[12px]"></i> <span data-key="s3_f1">Internal Job Board</span>
@@ -794,25 +793,25 @@
 
 
   <!-- ════════════════════════════════════════════════════
-       MINIMALIST DARK FOOTER
+       MINIMALIST DARK FOOTER (Reduced vertical height)
        ════════════════════════════════════════════════════ -->
-  <footer style="background: #0F172A;" class="mt-12">
+  <footer style="background: #0F172A;" class="mt-10">
     <div style="height:2px; background: linear-gradient(to right, transparent, rgba(212,175,55,0.6), transparent);"></div>
 
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-        <div class="lg:col-span-1 space-y-5">
+        <div class="lg:col-span-1 space-y-4">
           <div class="flex items-center gap-3">
             <div class="logo-mark border border-[#D4AF37]/40 w-10 h-10 rounded-lg flex items-center justify-center">
               <img src="logo.png" alt="Logo" class="h-6 w-auto object-contain drop-shadow" onerror="this.outerHTML='<i class=\'fa-solid fa-crown text-[#D4AF37] text-sm\'></i>'" />
             </div>
-            <span class="orb text-sm font-bold text-white tracking-widest uppercase" data-key="ftr_org">Rajukkal Sangam</span>
+            <span class="orb text-sm font-bold text-white tracking-widest uppercase" data-key="ftr_org">Raju's Community Portal</span>
           </div>
-          <p class="text-sm text-slate-400 font-playfair leading-relaxed" data-key="ftr_desc">Preserving heritage, fostering unity, and empowering the future of the Kshatriya Raju community.</p>
+          <p class="text-sm text-slate-400 font-playfair leading-relaxed" data-key="ftr_desc">Preserving heritage, fostering unity, and empowering the future of the community.</p>
         </div>
 
-        <div class="space-y-4">
+        <div class="space-y-3">
           <h4 class="orb text-[10px] font-bold tracking-[0.25em] uppercase text-[#D4AF37]" data-key="ftr_headq">Headquarters</h4>
           <div class="text-sm text-slate-400 font-inter leading-loose space-y-1" id="ADDRESS_NODE">
             <p>[Address Line 1]</p>
@@ -825,9 +824,9 @@
           </a>
         </div>
 
-        <div class="space-y-4">
+        <div class="space-y-3">
           <h4 class="orb text-[10px] font-bold tracking-[0.25em] uppercase text-[#D4AF37]" data-key="ftr_qlink">Quick Links</h4>
-          <ul class="space-y-3 font-semibold">
+          <ul class="space-y-2 font-semibold">
             <li><a href="#" onclick="switchView('home')" class="footer-link"><i class="fa-solid fa-chevron-right text-[8px] text-[#D4AF37]"></i> <span data-key="nav_home">Home</span></a></li>
             <li><a href="#" onclick="switchView('about')" class="footer-link"><i class="fa-solid fa-chevron-right text-[8px] text-[#D4AF37]"></i> <span data-key="nav_about">About Us</span></a></li>
             <li><a href="#" onclick="switchView('services')" class="footer-link"><i class="fa-solid fa-chevron-right text-[8px] text-[#D4AF37]"></i> <span data-key="nav_initiatives">Initiatives</span></a></li>
@@ -835,9 +834,9 @@
           </ul>
         </div>
 
-        <div class="space-y-4">
+        <div class="space-y-3">
           <h4 class="orb text-[10px] font-bold tracking-[0.25em] uppercase text-[#D4AF37]" data-key="ftr_pol">Policies</h4>
-          <ul class="space-y-3 font-semibold">
+          <ul class="space-y-2 font-semibold">
             <li><a href="#" class="footer-link"><i class="fa-solid fa-minus text-[8px] text-[#D4AF37]"></i> <span data-key="ftr_p1">Privacy Policy</span></a></li>
             <li><a href="#" class="footer-link"><i class="fa-solid fa-minus text-[8px] text-[#D4AF37]"></i> <span data-key="ftr_p2">Terms & Conditions</span></a></li>
             <li><a href="#" class="footer-link"><i class="fa-solid fa-minus text-[8px] text-[#D4AF37]"></i> <span data-key="ftr_p3">Refund & Cancellation</span></a></li>
@@ -845,13 +844,13 @@
         </div>
       </div>
 
-      <div class="gold-rule my-10 border-t border-slate-800"></div>
+      <div class="gold-rule my-6 border-t border-slate-800"></div>
 
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-[11px] font-bold text-slate-500 orb tracking-wider uppercase">
-          &copy; <span id="current-year"></span> <span data-key="ftr_copy">Tamil Nadu Rajukkal Sangam.</span>
+          &copy; <span id="current-year"></span> <span data-key="ftr_copy">Raju's Community Portal.</span>
         </p>
-        <p class="text-[10px] text-slate-600 font-bold tracking-widest orb">FRONTEND_FRAMEWORK_V7.1</p>
+        <p class="text-[10px] text-slate-600 font-bold tracking-widest orb">FRONTEND_FRAMEWORK_V8.0</p>
       </div>
     </div>
   </footer>
@@ -865,11 +864,11 @@
     /* --- TRANSLATION DICTIONARY --- */
     const dict = {
       en: {
-        org_name: "TAMIL NADU RAJUKKAL SANGAM",
+        org_name: "RAJU'S COMMUNITY PORTAL",
         nav_home: "Home", nav_about: "About Us", nav_initiatives: "Initiatives",
         nav_gallery: "Gallery", nav_events: "Events", nav_contact: "Contact", nav_join: "Join Sangam",
         hero_badge: "Official Digital Hub", hero_head1: "Preserving Our Legacy", hero_head2: "Empowering Our Future",
-        hero_desc: "Welcome to the official online portal of the Tamil Nadu Rajukkal Sangam. A dedicated platform uniting our community for cultural preservation, socio-economic welfare, and seamless organizational coordination.",
+        hero_desc: "Welcome to the official online portal of the Raju's Community. A dedicated platform uniting our community for cultural preservation, socio-economic welfare, and seamless organizational coordination.",
         hero_btn1: "Become a Member", hero_btn2: "Learn Our History", hero_scroll: "Discover More",
         board_eyebrow: "Notice Board", board_head: "Community Announcements",
         board_1: "Annual General Meeting 2026", board_2: "Education Scholarship Setup", board_3: "Matrimony Mega Meet", board_4: "Business Network Expo",
@@ -883,12 +882,12 @@
         abt_his_1: "The Rajukkal community traces its origins back to noble Kshatriya lineages. Over centuries, our ancestors migrated and settled across prominent regions in Tamil Nadu, including Rajapalayam, Madurai, and Chennai, bringing with them a rich tapestry of culture, valor, and traditions.",
         abt_his_2: "Today, the Sangam acts as the custodian of this heritage, maintaining vital records, gothiram lineage data, and fostering unity among the diaspora.",
         abt_ldr_eye: "Executive Committee", abt_ldr_1: "President", abt_ldr_2: "General Secretary",
-        srv_eye: "Our Core Operations", srv_head: "Community Initiatives", srv_desc: "Structured frameworks designed to support and elevate members of the Rajukkal Sangam across various life stages.",
+        srv_eye: "Our Core Operations", srv_head: "Community Initiatives", srv_desc: "Structured frameworks designed to support and elevate members of the Raju's Community across various life stages.",
         s1_eye: "Alliance", s1_head: "Matrimony Hub", s1_desc: "A dedicated, verified portal connecting families based on gothiram, native locations, and astrological alignments.",
         s1_f1: "100% ID Verified Profiles", s1_f2: "Horoscope Alignment Match", s1_f3: "Advanced Privacy Controls", s1_btn: "Access Matrimony",
         s2_eye: "Empowerment", s2_head: "Educational Aid", s2_desc: "Fostering academic excellence through scholarship programs and career guidance for community youth.",
         s2_f1: "Merit Scholarships", s2_f2: "Higher Studies Support", s2_f3: "Career Counseling Seminars", s2_btn: "Apply for Aid",
-        s3_eye: "Networking", s3_head: "Professional Directory", s3_desc: "Bridging the gap between employers and talented job seekers within the Rajukkal business network.",
+        s3_eye: "Networking", s3_head: "Professional Directory", s3_desc: "Bridging the gap between employers and talented job seekers within the business network.",
         s3_f1: "Internal Job Board", s3_f2: "Business Exhibitions", s3_f3: "Entrepreneurship Grants", s3_btn: "View Directory",
         gal_eye: "Media Vault", gal_head: "Event Gallery", gal_f1: "ALL PHOTOS", gal_f2: "MEETINGS", gal_f3: "FESTIVALS",
         evt_eye: "Notice Board", evt_head: "Upcoming Events", evt_f1: "UPCOMING", evt_f2: "PAST EVENTS",
@@ -897,16 +896,16 @@
         cnt_eye: "Get in Touch", cnt_head: "Contact Headquarters", cnt_form_eye: "Send a Message",
         cnt_lbl_name: "Full Name", cnt_ph_name: "Enter your full name", cnt_lbl_email: "Email Address", cnt_ph_email: "Enter your email address",
         cnt_lbl_msg: "Message", cnt_ph_msg: "How can we help you?", cnt_btn: "Submit Message", cnt_soc_eye: "Official Channels",
-        ftr_org: "Rajukkal Sangam", ftr_desc: "Preserving heritage, fostering unity, and empowering the future of the Kshatriya Raju community.",
+        ftr_org: "Raju's Community Portal", ftr_desc: "Preserving heritage, fostering unity, and empowering the future of the community.",
         ftr_headq: "Headquarters", ftr_qlink: "Quick Links", ftr_pol: "Policies", ftr_p1: "Privacy Policy", ftr_p2: "Terms & Conditions", ftr_p3: "Refund & Cancellation",
-        ftr_copy: "Tamil Nadu Rajukkal Sangam."
+        ftr_copy: "Raju's Community Portal."
       },
       ta: {
-        org_name: "தமிழ்நாடு ராஜுக்கள் சங்கம்",
+        org_name: "ராஜு சமூக தளம்",
         nav_home: "முகப்பு", nav_about: "எங்களை பற்றி", nav_initiatives: "முயற்சிகள்",
         nav_gallery: "புகைப்படங்கள்", nav_events: "நிகழ்வுகள்", nav_contact: "தொடர்பு கொள்ள", nav_join: "சங்கத்தில் சேர",
         hero_badge: "அதிகாரப்பூர்வ தளம்", hero_head1: "நமது பாரம்பரியத்தை பாதுகாப்போம்", hero_head2: "நமது எதிர்காலத்தை மேம்படுத்துவோம்",
-        hero_desc: "தமிழ்நாடு ராஜுக்கள் சங்கத்தின் அதிகாரப்பூர்வ இணையதளத்திற்கு வரவேற்கிறோம். சமூகத்தின் கலாச்சார பாதுகாப்பு, சமூக-பொருளாதார நல்வாழ்வு மற்றும் தடையற்ற ஒருங்கிணைப்பிற்கான பிரத்யேக தளம்.",
+        hero_desc: "ராஜு சமூகத்தின் அதிகாரப்பூர்வ இணையதளத்திற்கு வரவேற்கிறோம். சமூகத்தின் கலாச்சார பாதுகாப்பு, சமூக-பொருளாதார நல்வாழ்வு மற்றும் தடையற்ற ஒருங்கிணைப்பிற்கான பிரத்யேக தளம்.",
         hero_btn1: "உறுப்பினராக சேர", hero_btn2: "நமது வரலாற்றை அறிய", hero_scroll: "மேலும் அறிய",
         board_eyebrow: "அறிவிப்பு பலகை", board_head: "சமூக அறிவிப்புகள்",
         board_1: "2026 ஆண்டு பொதுக்குழு கூட்டம்", board_2: "கல்வி உதவித்தொகை திட்டம்", board_3: "மாபெரும் திருமண தகவல் மையம்", board_4: "வணிக வலைப்பின்னல் கண்காட்சி",
@@ -934,9 +933,9 @@
         cnt_eye: "தொடர்புகொள்ள", cnt_head: "தலைமையகத்தை தொடர்பு கொள்ள", cnt_form_eye: "செய்தி அனுப்ப",
         cnt_lbl_name: "முழு பெயர்", cnt_ph_name: "உங்கள் முழு பெயரை உள்ளிடவும்", cnt_lbl_email: "மின்னஞ்சல் முகவரி", cnt_ph_email: "உங்கள் மின்னஞ்சலை உள்ளிடவும்",
         cnt_lbl_msg: "செய்தி", cnt_ph_msg: "நாங்கள் உங்களுக்கு எப்படி உதவ முடியும்?", cnt_btn: "செய்தியை சமர்ப்பிக்க", cnt_soc_eye: "அதிகாரப்பூர்வ பக்கங்கள்",
-        ftr_org: "ராஜுக்கள் சங்கம்", ftr_desc: "க்ஷத்திரிய ராஜு சமூகத்தின் பாரம்பரியத்தை பாதுகாத்தல் மற்றும் எதிர்காலத்தை மேம்படுத்துதல்.",
+        ftr_org: "ராஜு சமூக தளம்", ftr_desc: "க்ஷத்திரிய ராஜு சமூகத்தின் பாரம்பரியத்தை பாதுகாத்தல் மற்றும் எதிர்காலத்தை மேம்படுத்துதல்.",
         ftr_headq: "தலைமையகம்", ftr_qlink: "விரைவு இணைப்புகள்", ftr_pol: "கொள்கைகள்", ftr_p1: "தனியுரிமை கொள்கை", ftr_p2: "விதிமுறைகள் மற்றும் நிபந்தனைகள்", ftr_p3: "பணத்தைத் திரும்பப்பெறுதல்",
-        ftr_copy: "தமிழ்நாடு ராஜுக்கள் சங்கம்."
+        ftr_copy: "ராஜு சமூக தளம்."
       }
     };
 
